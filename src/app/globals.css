@@ -2,26 +2,100 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+    background-color: #80a036;
+  }
+  
+  #app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }     
+.countdown-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px;
+  background-color: #d0f183;
+  border-radius: 100px;
+  width: 500px;
+  margin: 100px auto;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+h1 {
+  font-size: 40px;
+  color: #000000;
+  margin-bottom: 40px;
 }
+
+.time-display {
+  font-size: 48px;
+  font-weight: bolder;
+  color: #0070f3;
+  margin-bottom: 40px;
+}
+
+.time-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 30px;
+  border: 2px solid #0070f3;
+  border-radius: 10px;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+button {
+  padding: 20px;
+  font-size: 20px;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+.set-button {
+  background-color: #0070f3;
+  color: white;
+}
+
+.start-button {
+  background-color: #28a745;
+  color: white;
+}
+
+.pause-button {
+  background-color: #7b07ff;
+  color: white;
+}
+
+.reset-button {
+  background-color: #dc3545;
+  color: white;
+}
+
+button:hover {
+  opacity: 0.8;
+  background-color: #000000;
+  color: white;
+  transition: background-color 0.3s ease;
+  transition: color 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.hidden {
+    display: none;
+  }
+  
